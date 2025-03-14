@@ -1,0 +1,17 @@
+<header>
+    <nav class="navbar">
+        <div class="navbar-menu">
+            {{ range site.Menus.main }}
+            <a href="{{ .URL }}">
+                <div class="menu-item">
+                    <div class="hengtiao-root">
+                        <div class="hengtiao"></div>
+                        <div class="name text-wbd-reverse">{{ .Pre }} {{ .Name }}</div>
+                    </div>
+                </div>
+            </a>
+            {{ end }}
+
+        </div>
+    </nav>
+</header>

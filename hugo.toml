@@ -1,0 +1,15 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'asdffdsa'
+
+
+[menus]
+    [[menus.main]]
+        name = "Home"
+        url = "/"
+        pre = "ICON"
+    [[menus.main]]
+        name = "Reviews"
+        url = "/review"
+        pre = "ICON"
+

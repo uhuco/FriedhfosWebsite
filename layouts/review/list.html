@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+<h4>
+Liste:
+    {{ range .Pages }}
+
+    <div>
+        {{ .Params.name }} rating: {{ .Params.numStars }}
+    </div>
+
+    {{ end }}
+
+</h4>
+
+
+{{ end }}
