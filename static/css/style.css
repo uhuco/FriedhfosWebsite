@@ -324,7 +324,7 @@ header {
     backdrop-filter: blur(8px);
 }
 .navbar {
-    width: 100%;
+    min-width: 100%;
     height: 60px;
     padding: 0 20px;
     display: flex;
@@ -346,6 +346,7 @@ header {
 }
 .navbar-menu {
     height: inherit;
+    min-width: inherit;
     display: flex;
     align-items: center;
     white-space: nowrap;
@@ -363,9 +364,10 @@ header {
     display: none;
 }
 .mode {
+    margin-left: auto;
     width: 36px;
     height: 100%;
-    margin-right: -10px;
+    margin-right: 100px;
     text-align: center;
     cursor: pointer;
     display: flex;

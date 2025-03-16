@@ -6,19 +6,20 @@ function jump(sel) {
 
 if (sessionStorage.getItem('mode')) {
     if (sessionStorage.getItem('mode') == 'dark') {
-        $("link[href='/css/custom.css']").before(darkHTML);
+        //$("link[href='/css/custom.css']").before(darkHTML);
+        $('head').append(darkHTML);
     }
 }
 
 $(document).ready(function () {
     $('.loading').fadeOut("slow");
-    /*if (mode_custom == 'auto') {
+    if (mode_custom == 'auto') {
 
         if (!sessionStorage.getItem('mode')) {
             var mydate = new Date(), hourNow = mydate.getHours();
             var isDark = (hourNow <= 6 && hourNow >= 0) || (hourNow >= 18 && hourNow <= 23);
             if (isDark) {
-                $("link[href='/css/custom.css']").before(darkHTML);
+                // $("link[href='/css/custom.css']").before(darkHTML);
                 $(".sun").hide();
                 $(".moon").show();
                 sessionStorage.setItem('mode', 'dark');
@@ -34,7 +35,9 @@ $(document).ready(function () {
 
         $(".mode").click(function () {
             if (sessionStorage.getItem('mode') == 'light') {
-                $("link[href='/css/custom.css']").before(darkHTML);
+                // $("link[href='/css/custom.css']").before(darkHTML);
+                $('head').append(darkHTML);
+
                 $(".sun").hide();
                 $(".moon").show();
                 sessionStorage.setItem('mode', 'dark');
@@ -53,7 +56,7 @@ $(document).ready(function () {
         sessionStorage.setItem('mode', 'light');
     } else if (mode_custom == 'dark') {
         sessionStorage.setItem('mode', 'dark');
-    }*/
+    }
 
     if ($('.down-summary a')) {
         $('.down-summary a').contents().unwrap();
