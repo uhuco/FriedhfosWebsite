@@ -11,7 +11,22 @@
                 </div>
             </a>
             {{ end }}
-
+            <div class="navbar-burger">
+                <div class="burger-btn">☰</div>
+            </div>
         </div>
     </nav>
+
+    <div class="burger-items">
+        {{ range site.Menus.main }}
+        <a href="{{ .URL }}">
+            <div class="burger-item">
+                {{ .Pre }} {{ .Name }}
+            </div>
+        </a>
+        {{ end }}
+    </div>
+
+    <div class="header-rest"></div>
+
 </header>
